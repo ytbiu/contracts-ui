@@ -6,7 +6,7 @@ import type { FormattingOptions } from './formatUInt';
 import { formatUInt } from './formatUInt';
 
 const DEFAULT_OPTIONS: FormattingOptions = {
-  decimals: 12,
+  decimals: 15,
   fractionDigits: 2,
   symbol: undefined,
   digitGrouping: true,
