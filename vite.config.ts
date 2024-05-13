@@ -17,7 +17,10 @@ export default defineConfig({
       cypress: true,
     }),
   ],
-  server: { port: 8081 },
+  server: { 
+    host: '0.0.0.0',
+    port: 8081,
+   },
   build: {
     target: 'esnext',
     rollupOptions: {
