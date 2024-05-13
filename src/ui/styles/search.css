@@ -1,0 +1,27 @@
+.search-results {
+  @apply absolute mt-2 flex w-80 max-w-xs flex-col rounded shadow dark:bg-gray-800;
+}
+
+.search-results > * {
+  @apply px-4 py-2;
+}
+
+.search-results .header {
+  @apply text-xs dark:text-gray-500;
+}
+
+.search-results .item {
+  @apply flex cursor-pointer items-center text-sm dark:hover:bg-purple-500;
+}
+
+.search-results .item > * {
+  @apply mr-2 last:mr-0;
+}
+
+.search-results .item svg {
+  @apply h-5 w-5 dark:text-gray-500;
+}
+
+.search-results .item .identifier {
+  @apply overflow-hidden overflow-ellipsis text-gray-500;
+}

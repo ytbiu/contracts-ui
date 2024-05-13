@@ -1,0 +1,19 @@
+.btn {
+  @apply flex items-center justify-center rounded px-4 py-2 text-xs font-semibold disabled:cursor-not-allowed disabled:opacity-60;
+}
+
+.btn.plain {
+  @apply rounded-none px-0 py-0;
+}
+
+.btn.default:not(:disabled) {
+  @apply border border-gray-200 bg-gray-100 text-gray-600 hover:bg-gray-200 dark:border-gray-700 dark:bg-elevation-3 dark:text-gray-300 dark:hover:bg-elevation-1;
+}
+
+.btn.primary {
+  @apply border border-green-500 bg-green-500 text-gray-100;
+}
+
+.btn.primary:hover:not(:disabled) {
+  @apply border border-green-450 bg-green-450;
+}

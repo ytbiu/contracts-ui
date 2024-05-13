@@ -1,0 +1,18 @@
+name: Prepare
+description: Prepare test environment
+runs:
+  using: composite
+  steps:
+    - name: Download node artifact
+      uses: actions/download-artifact@v4
+      with:
+        name: substrate-contracts-node
+        path: ./
+
+    - name: Start local node
+      shell: bash
+      run: |
+        tar -xvzf substrate-contracts-node-linux.tar.gz
+        cd artifacts/substrate-contracts-node-linux/
+        chmod +x ./substrate-contracts-node
+        ./substrate-contracts-node --dev &

@@ -1,0 +1,11 @@
+.nav-link {
+  @apply flex items-center rounded-md border border-transparent px-2 py-2 text-base font-medium capitalize text-gray-600 hover:text-gray-400 dark:text-gray-300 dark:hover:text-white md:py-1 md:text-sm;
+}
+
+.nav-link.active {
+  @apply border-gray-200 dark:border-gray-stroke dark:bg-elevation-2;
+}
+
+.nav-link svg {
+  @apply mr-1.5 h-5 w-5 dark:text-gray-500;
+}

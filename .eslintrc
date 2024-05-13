@@ -1,0 +1,90 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json"
+  },
+  "env": {
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "prettier"
+  ],
+  "plugins": [
+    "header",
+    "import",
+    "@typescript-eslint",
+    "eslint-plugin-react",
+    "eslint-plugin-react-hooks"
+  ],
+  "overrides": [
+    {
+      "files": ["*.tsx", "*.js", "*.jsx", "*.ts"],
+      "rules": {
+        "no-undef": "off"
+      }
+    }
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    },
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx", ".cjs", ".json", ".css"],
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx", ".cjs", ".json", ".css"]
+      },
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": "."
+      }
+    }
+  },
+  "rules": {
+    "header/header": [
+      2,
+      "line",
+      [
+        {
+          "pattern": " Copyright \\d{4}(-\\d{4})? @paritytech/contracts-ui authors & contributors",
+          "template": " Copyright 2022-2024 @paritytech/contracts-ui authors & contributors"
+        },
+        " SPDX-License-Identifier: GPL-3.0-only"
+      ],
+      2
+    ],
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-misused-promises": "off",
+    "@typescript-eslint/no-unused-vars": "off",
+    "@typescript-eslint/restrict-template-expressions": "off",
+    "import/default": "warn",
+    "import/first": "error",
+    "import/named": "off",
+    "import/newline-after-import": "warn",
+    "import/no-absolute-path": "error",
+    "import/no-cycle": "error",
+    "import/no-deprecated": "error",
+    "import/no-duplicates": "error",
+    "import/no-mutable-exports": "error",
+    "import/no-named-as-default-member": "error",
+    "import/no-named-as-default": "error",
+    "import/no-self-import": "error",
+    "import/no-unresolved": "error",
+    "import/no-useless-path-segments": "warn",
+    "import/order": "warn",
+    "indent": "off",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
+    "react/display-name": "off",
+    "react/jsx-sort-props": "warn",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off"
+  }
+}
